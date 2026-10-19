@@ -15,3 +15,4 @@ button,.dl{display:block;width:100%;margin-top:1rem;background:#ffc300;color:#00
 .mbar{display:block;padding:.2rem .5rem calc(.4rem + env(safe-area-inset-bottom))}.mbar-t{margin:0 0 .2rem;text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#000}
 .mbar-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}.mbar .mbar-row a{display:flex;align-items:center;justify-content:center;gap:.35rem;min-height:44px;padding:.35rem .25rem;background:#000;color:#ffc300;border-radius:8px;font-size:.95rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:0}.mbar .mbar-row a+a{border-left:0}.mic{width:20px;height:20px}
 body{padding-bottom:84px}
+.vctl .vbtn{display:inline-flex;width:auto;margin-top:0;text-transform:none;font-size:.85rem;padding:.4rem .8rem;min-height:40px}.vid video{max-height:44vh}
