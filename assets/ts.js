@@ -16,3 +16,8 @@ f.addEventListener('submit',function(e){e.preventDefault();
 });
 if(location.hash==='#thanks')done();
 })();
+(function(){var v=document.getElementById('hero-video'),pb=document.getElementById('vid-play'),sb=document.getElementById('vid-sound');if(!v)return;
+function sync(){var pl=!v.paused;pb.textContent=pl?pb.dataset.pause:pb.dataset.play;pb.setAttribute('aria-pressed',String(pl));sb.textContent=v.muted?sb.dataset.un:sb.dataset.mu;sb.setAttribute('aria-pressed',String(!v.muted));}
+pb.addEventListener('click',function(){v.paused?v.play():v.pause();});sb.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted&&v.paused)v.play();sync();});
+v.addEventListener('play',sync);v.addEventListener('pause',sync);v.addEventListener('volumechange',sync);
+var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm){var p=v.play();if(p&&p.catch)p.catch(function(){});}sync();})();
